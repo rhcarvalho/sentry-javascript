@@ -5,6 +5,7 @@
 - "You miss 100 percent of the chances you don't take. — Wayne Gretzky" — Michael Scott
 - [react] feat: Add @sentry/react package (#2631)
 - [browser] Change XHR instrumentation order to handle `onreadystatechange` breadcrumbs correctly (#2643)
+- [browser] feat: Report LCP metric on pageload transactions (#2624)
 
 ## 5.16.1
 
