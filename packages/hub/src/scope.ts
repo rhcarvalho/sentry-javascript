@@ -14,7 +14,7 @@ import {
   Transaction,
   User,
 } from '@sentry/types';
-import { getGlobalObject, isPlainObject, isThenable, SyncPromise, timestampWithMs } from '@sentry/utils';
+import { dateTimestampInSeconds, getGlobalObject, isPlainObject, isThenable, SyncPromise } from '@sentry/utils';
 
 /**
  * Holds additional event information. {@link Scope.applyToEvent} will be
@@ -287,7 +287,7 @@ export class Scope implements ScopeInterface {
    */
   public addBreadcrumb(breadcrumb: Breadcrumb, maxBreadcrumbs?: number): this {
     const mergedBreadcrumb = {
-      timestamp: timestampWithMs(),
+      timestamp: dateTimestampInSeconds(),
       ...breadcrumb,
     };
 
